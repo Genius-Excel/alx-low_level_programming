@@ -1,6 +1,8 @@
 #include <stdio.h>
-/*
-* Outputs something and runturns 0
+
+/**
+* main - entry point
+* Return; 0 (success)
 */
 
 int main(void)
