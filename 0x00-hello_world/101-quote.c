@@ -8,8 +8,10 @@
 
 int main(void)
 {
-	char texts[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char text1[] = "and that piece of art is useful\" - Dora Korpar, ";
+	char text2[] = "2015-10-19\n";
 
-	write(2, texts, sizeof(texts) - 1);
+	write(2, text1, sizeof(text1) - 1);
+	write(2, text2, sizeof(text2) - 1);
 	return (1);
 }
