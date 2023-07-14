@@ -1,15 +1,13 @@
 #include <stdio.h>
 
 /**
-*
-* main - this is the main function 
-*
+* main - this is the main function
 * Return: always 0
 */
 
 int main(void)
 {
-	int lower , upper;
+	int lower, upper;
 
 	for (lower = 0; lower < 26; lower++)
 	{
