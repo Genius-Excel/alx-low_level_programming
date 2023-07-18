@@ -1,8 +1,8 @@
 #include "main.h"
 #include <unistd.h>
 /**
-* main - this is the main function
-* Retur:always 0
+* main - entry point this ouputs with _putchar
+* Return:always 0
 */
 int main(void)
 {
