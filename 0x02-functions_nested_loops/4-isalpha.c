@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
-* isalpha - checks for uppercase
+* _isalpha - checks for uppercase
 * @c: character to be checked
 * Return: 1 if c is a letter, 0 otherwise
 */
 
 int _isalpha(int c)
 {
-	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}
