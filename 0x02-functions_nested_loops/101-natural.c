@@ -9,7 +9,7 @@ int main(void)
 {
 	int num, mul3, mul5, sum;
 
-	mul3, mul5, sum = 0;
+	mul3 = mul5 = sum = 0;
 
 	for (num = 0; num < 1024; num++)
 	{
