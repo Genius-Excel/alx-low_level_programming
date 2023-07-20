@@ -1,7 +1,7 @@
 #include <stdio.h>
-
 /**
 * main - causes an infinite loop
+* @'\\o/': shows loop avoided
 * Return: 0
 */
 
