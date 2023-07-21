@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-* print_line - outputs  line
-* @n: numer of line
-* Return:void
+* print_diagonal - outputs line
+* @n: number of lines
+* Return: void
 */
 
-void print_line(int n)
+void print_diagonal(int n)
 {
 	int i;
 
@@ -16,7 +16,7 @@ void print_line(int n)
 	}
 	for (i = 0; i <= n; i++)
 	{
-		_putchar('_');
+		_putchar('\\');
 	}
 	_putchar('\n');
 }
