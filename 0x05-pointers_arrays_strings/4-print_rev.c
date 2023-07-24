@@ -5,18 +5,8 @@
  * @s: string to be reversed
  * Return: void
  */
-int _strlen(char *s)
-{
-	int len;
 
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-
-	return (len);
-}
+int _strlen(char *s);
 
 void print_rev(char *s)
 {
@@ -30,4 +20,23 @@ void print_rev(char *s)
 		_putchar(s[idx]);
 	}
 	_putchar('\n');
+}
+
+/**
+ * _strlen - outputs the length of string
+ * @s: string to be checked
+ * Return: len
+ */
+
+int _strlen(char *s)
+{
+	int len;
+
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+
+	return (len);
 }
