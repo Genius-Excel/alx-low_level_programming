@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * rev_string - outputs the string in reverse
@@ -7,6 +8,8 @@
  */
 
 int _strlen(char *s);
+
+int _putchar(char c);
 
 void rev_string(char *s)
 {
@@ -39,4 +42,15 @@ int _strlen(char *s)
 	}
 
 	return (len);
+}
+
+/**
+ * _putchar - this outputs a single character
+ * @c: character to be outputed
+ * Return: on success 1
+ */
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
