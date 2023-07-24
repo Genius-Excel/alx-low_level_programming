@@ -6,12 +6,12 @@
  * Return: void
  */
 
-int _strlen(char *c);
+int _strlen(char *s);
 
 void rev_string(char *s)
 {
 	int len, idx;
-	
+
 	len = _strlen(s);
 
 	for (idx = len - 1; idx >= 0; idx--)
