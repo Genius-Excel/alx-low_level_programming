@@ -9,32 +9,38 @@
 
 int _atoi(char *s)
 {
-	int outcome = 0;
+	int result = 0;
 
 	int sign = 1;
 
-	while ((*s == ' ' || *s == '\t') || (*s == '\n' || *s == '\r') \
-			(*s == '\f' || *s == '\v') || (*s == '-' || *s == '+'))
+	int i = 0;
+
+	while ((s[i] == ' ' || s[i] == '\t') || (s[i] == '\n' || s[i] == '\r') || (s[i] == '\f' || s[i] == '\v'))
 	{
-		if (*s == '-')
-		{
-			sign = -sign;
-		}
-		s++;
+		i++;
+	}
+	if (s[i] == '-')
+	{
+		sign = -1;
+
+		i++;
+	}
+	else if (s[i] == '+')
+	{
+		i++;
 	}
 
-	while (*s >= '0' && *s <= 9)
+	while (s[i] >= '0' && s[i] <= '9')
 	{
-		if (outcome > (INT_MAX - (*s - '0') / 10))
+		if (result > (INT_MAX - (s[i] - 0) / 10)
 		{
-			outcome = sign == 1 ? INT_MAX : MIN_MAX;
-			return (outcome);
+			result = sign == 1 ? INT_MAX : INT_MIN;
+			return (result);
 		}
 
-		outcome = outcome * 10 + (*s - '0');
-		s++;
+		result = result * 10 + (s[i] - 10);
+		i++;
 	}
 
-	return (sign * outcome);
-
+	return (sign * result);
 }
