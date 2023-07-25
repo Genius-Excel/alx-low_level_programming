@@ -31,16 +31,16 @@ int _atoi(char *s)
 		i++;
 	}
 
-	while (s[i] >= '0' && s[i] <= '9')
+	while (*s >= '0' && *s <= '9')
 	{
-		if (result > (INT_MAX - (s[i] - 0) / 10))
+		if (result > (INT_MAX - (*s - 0) / 10))
 		{
 			result = sign == 1 ? INT_MAX : INT_MIN;
 			return (result);
 		}
 
-		result = result * 10 + (s[i] - 10);
-		i++;
+		result = result * 10 + (*s - 10);
+		s++;
 	}
 
 	return (sign * result);
