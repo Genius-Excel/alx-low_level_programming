@@ -4,12 +4,14 @@
 
 /**
 * cap_string - capitalizes the first letter of each string
-* @ltr: character to be capitalized
+* @ptr: character to be capitalized
 * Return: ltr 0(success)
 */
 
-char *cap_string(char *ltr)
+char *cap_string(char *ptr)
 {
+	char *ltr = ptr;
+
 	int cap_text = 1;
 
 	while (*ltr != '\0')
@@ -31,5 +33,5 @@ char *cap_string(char *ltr)
 		}
 		ltr++;
 	}
-	return (ltr);
+	return (ptr);
 }
