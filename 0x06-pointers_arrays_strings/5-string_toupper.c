@@ -2,7 +2,7 @@
 
 /**
 * string_toupper - converts lower case to uppercase
-* @ltr: pointer address
+* @ptr: pointer address
 * Return: uppercase
 */
 
