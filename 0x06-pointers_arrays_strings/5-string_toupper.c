@@ -6,8 +6,10 @@
 * Return: uppercase
 */
 
-char *string_toupper(char *ltr)
+char *string_toupper(char *ptr)
 {
+	char *ltr = ptr;
+
 	while (*ltr != '\0')
 	{
 		if (*ltr >= 'a' && *ltr <= 'z')
@@ -16,5 +18,5 @@ char *string_toupper(char *ltr)
 		}
 		ltr++;
 	}
-	return (ltr);
+	return (ptr);
 }
