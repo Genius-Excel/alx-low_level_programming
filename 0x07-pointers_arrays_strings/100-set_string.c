@@ -17,7 +17,7 @@ void set_string(char **s, char *to)
 		free(*s);
 	}
 
-	*s = (char*)malloc((strlen(to) + 1) * sizeof(char));
+	*s = (char *)malloc((strlen(to) + 1) * sizeof(char));
 
 	if (*s != NULL)
 	{
