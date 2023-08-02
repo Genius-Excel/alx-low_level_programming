@@ -9,16 +9,16 @@
 
 int prime_recursion(int n, int i)
 {
-	if (n <= 1)
+	if (n == i)
 	{
 		return (1);
 	}
-	if (n % i == 0)
+	else if (n % i == 0)
 	{
 		return (0);
 	}
 
-	return (prime_recursion(n, i - 1));
+	return (prime_recursion(n, i + 1));
 }
 
 /**
@@ -33,5 +33,5 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	return (prime_recursion(n, n - 1));
+	return (prime_recursion(n, 2));
 }
