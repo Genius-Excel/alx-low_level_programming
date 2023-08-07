@@ -20,16 +20,16 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
+	else if (ptr == NULL)
+	{
+		return (NULL);
+	}
 	else if (size > 0)
 	{
 		for (i = 0; i < size; i++)
 		{
 			ptr[i] = c;
 		}
-	}
-	else if (ptr == NULL)
-	{
-		return (NULL);
 	}
 	else
 	{
