@@ -27,10 +27,13 @@ char *create_array(unsigned int size, char c)
 			ptr[i] = c;
 		}
 	}
+	else if (ptr == NULL)
+	{
+		return (NULL);
+	}
 	else
 	{
 		return (NULL);
 	}
 	return (ptr);
-	free(ptr);
 }
