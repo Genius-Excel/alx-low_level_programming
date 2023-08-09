@@ -12,13 +12,11 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i, len, arr_len;
+	int i, j, len, arr_index = 0;
 
 	char *concat;
 
 	len = 0;
-
-	arr_len = 0;
 
 	if (ac <= 0 || av == NULL)
 	{
@@ -27,8 +25,13 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		len = strlen(av[i]) + 1;
+		for (j = 0; av[i][j]; j++)
+		{
+			len += 1;
+		}
 	}
+
+	len += ac;
 
 	concat = (char *)malloc((len + 1) * sizeof(char));
 
@@ -39,13 +42,16 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		strcpy(concat +  arr_len, av[i]);
-		arr_len += strlen(av[i]);
+		for (j = 0; av[i][j]; j++)
+		{
+			concat[arr_index] = av[i][j];
 
-		concat[arr_len++] = '\n';
+			arr_index++;
+		}
 	}
-
-	concat[arr_len] = '\0';
-
+	if (concat[arr_index] == '\0')
+	{
+		concat[arr_index++] = '\n';
+	}
 	return (concat);
 }
