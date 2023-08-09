@@ -30,7 +30,6 @@ char *argstostr(int ac, char **av)
 			len += 1;
 		}
 	}
-
 	len += ac;
 
 	concat = (char *)malloc((len + 1) * sizeof(char));
@@ -39,13 +38,11 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++)
 		{
 			concat[arr_index] = av[i][j];
-
 			arr_index++;
 		}
 	}
