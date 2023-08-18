@@ -13,42 +13,37 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i = 0;
 	char *seperator = "";
-	bool format_printed = false;
 	va_list format_specifier_args;
 
 	va_start(format_specifier_args, format);
 
 	while (format && format[i])
 	{
-		if (format[i] == 'i')
+		switch (format[i])
 		{
-			printf("%s%d", seperator, va_arg(format_specifier_args, int));
-			format_printed = true;
-		}
-		else if (format[i] == 'c')
-		{
-			printf("%s%c", seperator, va_arg(format_specifier_args, int));
-			format_printed = true;
-		}
-		else if (format[i] == 'f')
-		{
-			printf("%s%f", seperator, va_arg(format_specifier_args, double));
-			format_printed = true;
-		}
-		else if (format[i] == 's')
-		{
-			char *str = va_arg(format_specifier_args, char *);
+			case 'i':
+				printf("%s%d", seperator, va_arg(format_specifier_args, int));
+				break;
+			case 'c':
+				printf("%s%c", seperator, va_arg(format_specifier_args, int));
+				break;
+			case 'f':
+				printf("%s%f", seperator, va_arg(format_specifier_args, double));
+				break;
+			case 's':
+				{
+					char *str = va_arg(format_specifier_args, char *);
 
-			if (str == NULL)
-				str = "(nil)";
-			printf("%s%s", seperator, str);
-			format_printed = true;
+					if (str == NULL)
+						str = "(nil)";
+					printf("%s%s", seperator, str);
+				}
+				break;
+			default:
+				break;
 		}
-		if (format_printed)
-		{
-			seperator = ", ";
-			format_printed = false;
-		}
+		seperator = ", ";
+
 		i++;
 	}
 	va_end(format_specifier_args);
