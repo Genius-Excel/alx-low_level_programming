@@ -8,13 +8,13 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int observer;
+	unsigned long int obsvr;
 
 	bool digit_is_1 = false;
 
-	for (observer = 1UL << (sizeof(unsigned long int) * 8 - 1); observer; observer >>= 1)
+	for (obsvr = 1UL << (sizeof(unsigned long int) * 8 - 1); obsvr; obsvr >>= 1)
 	{
-		if (n & observer)
+		if (n & obsvr)
 		{
 			digit_is_1 = true;
 
