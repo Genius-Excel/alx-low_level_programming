@@ -331,7 +331,7 @@ int main(int argc, const char *argv[])
 
 	int mt;
 
-	if (argc != 2)
+	if (argc < 2)
 	{
 		write(STDERR_FILENO, "Usage: elf_header elf_filename\n", 31);
 		exit(98);
