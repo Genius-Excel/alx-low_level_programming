@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
 * add - this functone adds two integers.
 * @a: first number
@@ -39,6 +41,10 @@ int mul(int a, int b)
 */
 int div(int a, int b)
 {
+	if (b == 0)
+	{
+		fprintf(stderr, "Zero division not allowed.\n");
+	}
 	return (a / b);
 }
 
@@ -51,5 +57,9 @@ int div(int a, int b)
 
 int mod(int a, int b)
 {
+	if (b == 0)
+	{
+		fprintf(stderr, "Zero division not alloewed.\n");
+	}
 	return (a % b);
 }
