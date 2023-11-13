@@ -44,12 +44,9 @@ int div(int a, int b)
 	if (b == 0)
 	{
 		fprintf(stderr, "Zero division not allowed.\n");
-		return (0);
+		return (-1);
 	}
-	else
-	{
-		return (a / b);
-	}
+	return (a / b);
 }
 
 /**
@@ -64,10 +61,7 @@ int mod(int a, int b)
 	if (b == 0)
 	{
 		fprintf(stderr, "Zero division not alloewed.\n");
-		return (0);
+		return (-1);
 	}
-	else
-	{
-		return (a % b);
-	}
+	return (a % b);
 }
