@@ -17,6 +17,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 
+	if (size == 0)
+	{
+		return (NULL);
+	}
+
 	(*new_table).size = size;
 
 	return (new_table);
