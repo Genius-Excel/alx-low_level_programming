@@ -8,10 +8,9 @@ def island_perimeter(grid):
         Args:
             grind (list of lists): this represnets the grid.
 
-	Returns:
-            (int): Perimeter of the calculated grid.
+        Returns:
+        (int): Perimeter of the calculated grid.
     """
-
 
     per = 0
     for i in range(len(grid)):
